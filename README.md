@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontent Mentor](https://your-solution-url.com)
-- Live Site URL: [Live Demo](https://your-live-site-url.com)
+- Solution URL: [Frontent Mentor](https://www.frontendmentor.io/solutions/article-preview-component-6q2Rw-Nn0S)
+- Live Site URL: [Live Demo](https://snazzy-rugelach-a6c86e.netlify.app/)
 
 ## My process
 
