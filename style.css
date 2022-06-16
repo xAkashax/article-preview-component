@@ -1,0 +1,239 @@
+:root {
+  --fz: 13px;
+  --fw-500: 500;
+  --fw-700: 700;
+  --fontStyle: 'Manrope', sans-serif;
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --desaturatedDarkBlue: hsl(214, 17%, 51%);
+  --grayishBlue: hsl(212, 23%, 69%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  font-family: var(--fontStyle);
+  font-size: var(--fz);
+  font-weight: var(--fw-500);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--lightGrayishBlue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  margin: auto 0;
+  padding: 0 15px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 1px hsla(217, 19%, 35%, 0.402);
+}
+
+.header-img {
+  background-image: url(images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-size: cover;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  display: block;
+  flex-grow: 1;
+  width: 100%;
+  height: 230px;
+}
+
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.description {
+  flex-grow: 1;
+  margin: 40px 35px 25px;
+}
+
+.description h1 {
+  padding-right: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: var(--fw-700);
+  color: var(--veryDarkGrayishBlue);
+}
+
+.description p {
+  margin-top: 15px;
+  padding-right: 18px;
+  line-height: 1.8;
+  color: var(--desaturatedDarkBlue);
+}
+
+.author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px 40px 20px;
+}
+
+.author .avatar {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.data {
+  align-self: center;
+  margin-left: 15px;
+  line-height: 1.5;
+}
+
+.data .name {
+  font-weight: var(--fw-700);
+  color: var(--veryDarkGrayishBlue);
+}
+
+.data .date {
+  color: var(--grayishBlue);
+}
+
+.share-btn {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 10px 12px;
+  border-radius: 50%;
+  background-color: var(--lightGrayishBlue);
+  color: var(--desaturatedDarkBlue);
+}
+
+.share {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 75px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: var(--veryDarkGrayishBlue);
+}
+
+.share p {
+  margin: 0 10px 0 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--grayishBlue);
+}
+
+.share .social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social li {
+  padding: 0 8px;
+}
+
+.social li:hover {
+  transform: scale(1.2);
+}
+
+.social li:nth-child(2) {
+  padding-top: 2px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width : 1020px) {
+  main {
+    width: 790px;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .header-img {
+    background-size: cover;
+    border-bottom-left-radius: inherit;
+    border-top-right-radius: 0;
+    height: auto;
+  }
+
+  .description h1 {
+    padding-right: 14px;
+    font-size: 20px; 
+  }
+
+  .author {
+    margin: 0px 45px 20px 20px;
+  }
+
+  .author .avatar {
+    margin-left: 10px;
+  }
+
+  .data {
+    margin-left: 20px;
+  }
+
+  .share {
+    box-shadow: 0 5px 5px 1px hsla(217, 19%, 35%, 0.402);
+  }
+
+  .share-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: 75px;
+    right: 43px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 15px;
+    border-color: #48576a transparent transparent transparent;
+  }
+
+  .share {
+    position: absolute;
+    left: 75%;
+    bottom: 30%;
+    width: 35%;
+    height: 60px;
+    border-radius: 15px;
+  }
+}
