@@ -1,10 +1,6 @@
 const shareBtn = document.querySelector('.share-btn');
 const shareWrap = document.querySelector('.share-wrap');
 
-// const shareOption = function() {
-//   shareWrap.style.display = "block";
-// }
-
 function shareOption() {
   if(shareWrap.style.display === "none") {
     shareWrap.style.display = "block";
